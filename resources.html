@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CatsIn | Resources</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="menu-fix.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-logo">CatsIn</div>
+        <div class="hamburger" id="hamburger-menu" aria-label="Open navigation" tabindex="0">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="form.html">Join</a></li>
+            <li><a href="resources.html" class="active">Resources</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+    </nav>
+    <main>
+        <header>
+            <h1>Cat Resources</h1>
+        </header>
+        <section>
+            <ul class="resource-list">
+                <li class="resource-item">
+                    <img src="https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg" alt="Cat Breeds List" style="width: 20%; height: auto;">
+                    <div class="resource-content">
+                        <h3>Cat Breeds List</h3>
+                        <p>A comprehensive database of cat breeds from around the world, complete with descriptions, traits, origin information and more.</p>
+                        <a href="https://www.catbreedslist.com/" target="_blank">Visit Website</a>
+                    </div>
+                </li>
+                <li class="resource-item">
+                    <img src="https://cdn2.thecatapi.com/images/akb.jpg" alt="ASPCA Cat Care" style="width: 17%; height: auto;">
+                    <div class="resource-content">
+                        <h3>ASPCA Cat Care</h3>
+                        <p>The American Society for the Prevention of Cruelty to Animals provides expert advice on cat care, health, behavior, and training.</p>
+                        <a href="https://www.aspca.org/pet-care/cat-care" target="_blank">Visit Website</a>
+                    </div>
+                </li>
+                <li class="resource-item">
+                    <img src="https://cdn2.thecatapi.com/images/9j5.jpg" alt="Hill's Cat Nutrition" style="width: 25%; height: auto;">
+                    <div class="resource-content">
+                        <h3>Hill's Cat Nutrition</h3>
+                        <p>Expert information about cat nutrition, dietary needs, and how different foods impact your cat's health and wellbeing.</p>
+                        <a href="https://www.hillspet.com/cat-care" target="_blank">Visit Website</a>
+                    </div>
+                </li>
+                <li class="resource-item">
+                    <img src="https://cdn2.thecatapi.com/images/a6g.jpg" alt="Wikipedia: Cat">
+                    <div class="resource-content">
+                        <h3>Wikipedia: Cat</h3>
+                        <p>An extensive resource covering the taxonomy, evolution, physiology, behavior, and human interaction with domestic cats.</p>
+                        <a href="https://en.wikipedia.org/wiki/Cat" target="_blank">Visit Website</a>
+                    </div>
+                </li>
+                <li class="resource-item">
+                    <img src="https://cdn2.thecatapi.com/images/aph.jpg" alt="Catster Magazine" style="width: 20%; height: auto;">
+                    <div class="resource-content">
+                        <h3>Catster Magazine</h3>
+                        <p>An online magazine dedicated to all things cats, with articles on health, behavior, lifestyle, and product reviews for cat owners.</p>
+                        <a href="https://www.catster.com/" target="_blank">Visit Website</a>
+                    </div>
+                </li>
+                <li class="resource-item">
+                    <img src="https://cdn2.thecatapi.com/images/a7r.jpg" alt="International Cat Care" style="width: 20%; height: auto;">
+                    <div class="resource-content">
+                        <h3>International Cat Care</h3>
+                        <p>A charity dedicated to improving the care of all cats through supporting veterinary and cat care professionals with education and advice.</p>
+                        <a href="https://icatcare.org/" target="_blank">Visit Website</a>
+                    </div>
+                </li>
+                <li class="resource-item">
+                    <img src="https://cdn2.thecatapi.com/images/a3s.jpg" alt="The Cat Fanciers' Association" style="width: 17%; height: auto;">
+                    <div class="resource-content">
+                        <h3>The Cat Fanciers' Association</h3>
+                        <p>The world's largest registry of pedigreed cats, providing breed standards, show information, and breeder referrals.</p>
+                        <a href="https://cfa.org/" target="_blank">Visit Website</a>
+                    </div>
+                </li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 CatsIn. All rights reserved.</p>
+    </footer>
+    <script>
+    // Hamburger menu toggle
+    const hamburger = document.getElementById('hamburger-menu');
+    const navLinks = document.getElementById('nav-links');
+    hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('open');
+        document.body.classList.toggle('menu-open');
+    });
+    hamburger.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+            navLinks.classList.toggle('open');
+            document.body.classList.toggle('menu-open');
+        }
+    });
+    // Close menu when clicking a link (mobile UX)
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('open');
+            document.body.classList.remove('menu-open');
+        });
+    });
+    </script>
+</body>
+</html>

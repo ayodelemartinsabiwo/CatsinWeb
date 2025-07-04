@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CatsIn | Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="menu-fix.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-logo">CatsIn</div>
+        <div class="hamburger" id="hamburger-menu" aria-label="Open navigation" tabindex="0">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="form.html">Join</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+    </nav>
+    <main class="landing-main">
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1 class="landing-headline">Welcome to CatsIn</h1>
+                <p class="landing-sub">Discover, Connect, and Celebrate Everything About Cats</p>
+                <p class="landing-desc">CatsIn is your modern hub for cat lovers. Explore beautiful cat galleries, join a passionate community, and access curated resources to help you care for and enjoy your feline friends. Whether you’re a lifelong cat parent or just curious, you’ll find inspiration, knowledge, and connection here.</p>
+                <a href="form.html" class="cta-btn">Join the Community</a>
+            </div>
+            <div class="hero-image">
+                <img src="https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg" alt="Hero Cat" style="max-width: 700px; width: 100%; height: auto; border-radius: 24px; box-shadow: 0 8px 40px rgba(74,144,226,0.18), 0 2px 24px rgba(231,84,128,0.10); margin-top: 1.5rem; margin-bottom: 1.5rem; display: block; object-fit: cover;" />
+            </div>
+        </section>
+        <section class="features-section">
+            <div class="feature">
+                <h2>Cat Gallery</h2>
+                <p>Browse a stunning collection of cat breeds and adorable photos. Each image comes with fun facts and breed details.</p>
+            </div>
+            <div class="feature">
+                <h2>Resources</h2>
+                <p>Access expert guides, care tips, and trusted links to keep your cat happy and healthy.</p>
+            </div>
+            <div class="feature">
+                <h2>Get Involved</h2>
+                <p>Share your own cat stories, connect with other cat lovers, and become part of a vibrant, supportive community.</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 CatsIn. All rights reserved.</p>
+    </footer>
+    <script>
+    // Hamburger menu toggle
+    const hamburger = document.getElementById('hamburger-menu');
+    const navLinks = document.getElementById('nav-links');
+    hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('open');
+        document.body.classList.toggle('menu-open');
+    });
+    hamburger.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+            navLinks.classList.toggle('open');
+            document.body.classList.toggle('menu-open');
+        }
+    });
+    // Close menu when clicking a link (mobile UX)
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('open');
+            document.body.classList.remove('menu-open');
+        });
+    });
+    </script>
+</body>
+</html>
